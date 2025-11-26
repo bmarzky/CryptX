@@ -4,9 +4,9 @@
 
 ---
 
-## 📦 Instalasi
+## Instalasi
 
-### **1️⃣ Buat Virtual Environment (Disarankan)**
+### Buat Virtual Environment (Disarankan)
 
 Windows:
 ```bash
@@ -20,7 +20,7 @@ python3 -m venv .venv
 
 ---
 
-### ** Aktifkan Virtual Environment**
+### Aktifkan Virtual Environment
 
 Windows (PowerShell):
 ```bash
@@ -44,7 +44,7 @@ Jika berhasil, akan muncul tanda:
 
 ---
 
-### ** Install Package**
+### Install Package
 
 Mode pengembangan (editable):
 ```bash
@@ -74,7 +74,7 @@ cipherbox --help
 
 # Perintah Enkripsi
 
-## **AES Encryption**
+## AES Encryption
 Enkripsi teks:
 ```bash
 cipherbox encrypt --method aes --text "Halo Dunia" --password PASSWORD_ANDA
@@ -87,7 +87,7 @@ cipherbox encrypt --method aes --infile input.txt --outfile terenkripsi.bin --pa
 
 ---
 
-## **Base64 Encoding**
+## Base64 Encoding
 Enkripsi (encoding) teks:
 ```bash
 cipherbox encrypt --method base64 --text "Halo"
@@ -100,7 +100,7 @@ cipherbox encrypt --method base64 --infile gambar.png --outfile encoded.txt
 
 ---
 
-## **XOR Encryption**
+## XOR Encryption
 Enkripsi teks:
 ```bash
 cipherbox encrypt --method xor --text "Halo" --key 123
@@ -115,21 +115,21 @@ cipherbox encrypt --method xor --infile input.bin --outfile output.bin --key 55
 
 # Perintah Dekripsi
 
-## **AES Decryption**
+## AES Decryption
 ```bash
 cipherbox decrypt --method aes --infile terenkripsi.bin --password PASSWORD_ANDA
 ```
 
 ---
 
-## **Base64 Decoding**
+## Base64 Decoding
 ```bash
 cipherbox decrypt --method base64 --text "SGVsbG8="
 ```
 
 ---
 
-## **XOR Decryption**
+## XOR Decryption
 ```bash
 cipherbox decrypt --method xor --infile terenkripsi.bin --outfile hasil.txt --key 123
 ```
@@ -147,8 +147,8 @@ cipherbox decrypt --method xor --infile terenkripsi.bin --outfile hasil.txt --ke
 | `--password`   | AES              | Password untuk enkripsi AES |
 | `--key`        | XOR              | Kunci XOR |
 
-📝 Jika `--text` dan `--infile` dipakai bersamaan:  
-➡️ **Yang digunakan adalah `--infile`.**
+Jika `--text` dan `--infile` dipakai bersamaan:  
+**Yang digunakan adalah `--infile`.**
 
 ---
 
@@ -162,6 +162,5 @@ Gunakan password AES yang kuat.
 
 ---
 
-# 🧑‍💻 Penulis
 **Bima Rizki**  
 Mahasiswa Teknik Informatika & Enthusiast Keamanan Siber
