@@ -1,6 +1,6 @@
-# CryptX – CLI Sederhana untuk Enkripsi & Dekripsi
+# CryptX
 
-**CipherBox** adalah tool Command Line Interface (CLI) sederhana untuk melakukan enkripsi dan dekripsi menggunakan **AES**, **Base64**, dan **XOR**.
+**CryptX** adalah tool Command Line Interface (CLI) sederhana untuk melakukan enkripsi dan dekripsi menggunakan **AES**, **Base64**, dan **XOR**.
 
 ---
 
