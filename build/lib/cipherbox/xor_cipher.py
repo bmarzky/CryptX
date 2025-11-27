@@ -1,25 +1,20 @@
-from itertools import cycle
-import base64
+def encrypt(data: bytes, key: str) -> str:
+    key_bytes = key.encode("utf-8")
+    out = bytearray()
+
+    for i, b in enumerate(data):
+        out.append(b ^ key_bytes[i % len(key_bytes)])
+
+    # hasil XOR → ubah ke hex string supaya aman disimpan
+    return out.hex()
 
 
+def decrypt(hex_string: str, key: str) -> bytes:
+    key_bytes = key.encode("utf-8")
+    data = bytes.fromhex(hex_string)
+    out = bytearray()
 
+    for i, b in enumerate(data):
+        out.append(b ^ key_bytes[i % len(key_bytes)])
 
-def _apply_xor(data: bytes, key: bytes) -> bytes:
-    return bytes([b ^ k for b, k in zip(data, cycle(key))])
-
-
-
-
-def encrypt(plaintext: bytes, key: str) -> str:
-    keyb = key.encode('utf-8')
-    ct = _apply_xor(plaintext, keyb)
-    return base64.b64encode(ct).decode('utf-8')
-
-
-
-
-def decrypt(b64text: str, key: str) -> bytes:
-    keyb = key.encode('utf-8')
-    ct = base64.b64decode(b64text)
-    pt = _apply_xor(ct, keyb)
-    return pt
+    return bytes(out)
