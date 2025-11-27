@@ -1,9 +1,7 @@
 [project]
 name = "cipherbox"
 version = "0.2.1"
-authors = [
-    { name = "Bima Rizki" }
-]
+authors = [{ name = "Bima Rizki" }]
 description = "CRYPTX Encryption Tool by Bima"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -12,3 +10,4 @@ dependencies = ["pycryptodome"]
 
 [project.scripts]
 cryptx = "cipherbox.cli:main"
+
